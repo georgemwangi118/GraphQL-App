@@ -1,0 +1,16 @@
+div {
+  .product-container {
+    display: flex;
+
+    .product {
+      padding: 20px;
+      img {
+        width: 100px;
+        height: 100px;
+      }
+      h3 {
+        font-size: 13px;
+      }
+    }
+  }
+}
