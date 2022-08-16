@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./navbar.scss";
 import logo from "../../image/logo.jpg";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import { Link } from "react-router-dom";
 
 export default class Navbar extends Component {
   render() {
@@ -10,18 +11,20 @@ export default class Navbar extends Component {
         <div className="left">
           <ul>
             <li>
-              <a href="/wo">women</a>
+              <Link to="/">women</Link>
             </li>
             <li>
-              <a href="/me">Men</a>
+              <Link to="/">Men</Link>
             </li>
             <li>
-              <a href="/ki">Kids</a>
+              <Link to="/">Kids</Link>
             </li>
           </ul>
         </div>
         <div className="logo">
-          <img src={logo} alt="logo" />
+          <Link to="/">
+            <img src={logo} alt="logo" />
+          </Link>
         </div>
         <div className="right">
           <select name="" id="">
@@ -29,7 +32,9 @@ export default class Navbar extends Component {
             <option value="">$ USD</option>
             <option value="">$ USD</option>
           </select>
-          <ShoppingCartIcon />
+          <Link to="/overlay">
+            <ShoppingCartIcon />
+          </Link>
         </div>
       </div>
     );

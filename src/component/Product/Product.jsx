@@ -1,25 +1,32 @@
 import React, { Component } from "react";
 import "./product.scss";
+import products from "../Category/data";
 
 export default class Product extends Component {
   render() {
+    const product = products[0];
     return (
       <div>
-        <div>
-          <div className="images">
-            <p>images here</p>
+        <div className="product-view">
+          <div className="images-left">
+            <img src={product.image} alt="img" />
+            <img src={product.image} alt="img" />
+            <img src={product.image} alt="img" />
           </div>
-          <p>main image</p>
+          <div className="main-image">
+            <img src={product.image} alt="img" />
+          </div>
           <div className="details">
-            <p>title</p>
+            <p>{product.name}</p>
             <p>Size:</p>
             <div>sizes</div>
             <p>Color:</p>
             <div>colors</div>
-            <p>Price:</p>
+            <p>Price: </p>
+            <p>${product.price}</p>
             <p>Amount</p>
-            <button>ADD TO CART</button>
-            <p>Description</p>
+            <button className="btn">ADD TO CART</button>
+            <p>{product.name}</p>
           </div>
         </div>
       </div>
